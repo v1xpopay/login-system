@@ -1,13 +1,21 @@
 #login system (the base code)
 users = {
-    "admin": "1234",
-    "nayuu": "pass"
+    "admin": "12345678",
+    "nayuu": "thefinalboss"
 }
 
 username = input("Enter username: ")
 password = input("Enter password: ")
 
-if username in users and users[username] == password:
-    print("Access granted smaryy")
+if len(password) < 8:
+    print("Password must be at least 8 characters long")
 else:
-    print("Access denied (nice try diddy)")
+    if username in users and users[username] == password:
+        print("Access granted smarty")
+    else:
+        print("Access denied (nice try diddy)")
+typu = 3
+while username == "admin":
+    print("welcome admin")
+
+typu = typu + 1    
