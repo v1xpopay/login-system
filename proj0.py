@@ -14,8 +14,18 @@ else:
         print("Access granted smarty")
     else:
         print("Access denied (nice try diddy)")
-typu = 3
-while username == "admin":
-    print("welcome admin")
+attempts = 3
 
-typu = typu + 1    
+while attempts > 0:
+    username = input("Enter username: ")
+    password = input("Enter password: ")
+
+    if username in users and users[username] == password:
+        print("Access granted")
+        break
+    else:
+        attempts -= 1
+        print("Wrong credentials. Attempts left:", attempts)
+
+if attempts == 0:
+    print("Account locked")
