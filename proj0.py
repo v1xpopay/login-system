@@ -23,6 +23,7 @@ while attempts > 0:
     if username in users and users[username] == password:
         print("Access granted")
         break
+        
     else:
         attempts -= 1
         print("Wrong credentials. Attempts left:", attempts)
