@@ -59,7 +59,7 @@ int main() {
         printf("Password: ");
         scanf("%s", password);
 
-        // password length check
+
         if (strlen(password) < 8) {
             printf("Password too short (min 8 chars)\n");
             continue;
